@@ -1,5 +1,5 @@
 # frontend-interview_limin
-# 1. 用HTML+CSS实现一个可拖拽的积木块（尺寸100x100px，背景色为蓝色），拖拽时积木块透明度变为0.5，并限制拖拽范围在父容器（500x500px）内。
+## 1. 用HTML+CSS实现一个可拖拽的积木块（尺寸100x100px，背景色为蓝色），拖拽时积木块透明度变为0.5，并限制拖拽范围在父容器（500x500px）内。
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -93,7 +93,7 @@
 </html>
 
 
-# 2. 编写run函数，使该代码能正常运行，不报错
+## 2. 编写run函数，使该代码能正常运行，不报错
 function run() {
   Object.prototype[Symbol.iterator] = function() {
     return Object.values(this)[Symbol.iterator]();
@@ -103,7 +103,7 @@ run();
 const [a, b] = {a: 1, b: 2} ;
 console.log(a, b); // 输出 1 2
 
-# 3. 给定一组图形化代码块的json数据，编写函数将其转换为JavaScript代码字符串。
+## 3. 给定一组图形化代码块的json数据，编写函数将其转换为JavaScript代码字符串。
 function convertBlocksToJS(blocksData) {
   function processBlock(block) {
     if (!block) return "";
