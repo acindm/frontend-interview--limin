@@ -1,6 +1,7 @@
 # frontend-interview_limin
 ## 1. 用HTML+CSS实现一个可拖拽的积木块（尺寸100x100px，背景色为蓝色），拖拽时积木块透明度变为0.5，并限制拖拽范围在父容器（500x500px）内。
-```<!DOCTYPE html>
+```
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -24,7 +25,7 @@
             height: 100px;
             background-color: blue;
             cursor: grab;
-            user-select: none; /* 防止拖动时选中文本 */
+            user-select: none;
         }
         
         .dragging {
@@ -73,11 +74,11 @@
                 block.style.top = newY + 'px';
             });
             
-            // 结束拖拽
+            // 结束拖拽，恢复透明度
             document.addEventListener('mouseup', function() {
                 if (isDragging) {
                     isDragging = false;
-                    block.classList.remove('dragging'); // 恢复透明度
+                    block.classList.remove('dragging'); 
                 }
             });
             
@@ -90,21 +91,25 @@
         });
     </script>
 </body>
-</html>```
+</html>
+```
 
 
 ## 2. 编写run函数，使该代码能正常运行，不报错
-```function run() {
+```
+function run() {
   Object.prototype[Symbol.iterator] = function() {
     return Object.values(this)[Symbol.iterator]();
   };
 }
 run();
 const [a, b] = {a: 1, b: 2} ;
-console.log(a, b); // 输出 1 2```
+console.log(a, b); // 输出 1 2
+```
 
 ## 3. 给定一组图形化代码块的json数据，编写函数将其转换为JavaScript代码字符串。
-```function convertBlocksToJS(blocksData) {
+```
+function convertBlocksToJS(blocksData) {
   function processBlock(block) {
     if (!block) return "";
     
@@ -152,4 +157,5 @@ console.log(a, b); // 输出 1 2```
   }
   
   return processBlock(blocksData);
-}```
+}
+```
